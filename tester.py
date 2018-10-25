@@ -78,7 +78,7 @@ CLF_PICKLE_FILENAME = "my_classifier.pkl"
 DATASET_PICKLE_FILENAME = "my_dataset.pkl"
 FEATURE_LIST_FILENAME = "my_feature_list.pkl"
 
-def dump_classifier_and_data(clf, dataset, feature_list):
+def dump_classifier_and_data(clf, dataset, feature_list): #saving the classifier dataset and feature list
     with open(CLF_PICKLE_FILENAME, "w") as clf_outfile:
         pickle.dump(clf, clf_outfile)
     with open(DATASET_PICKLE_FILENAME, "w") as dataset_outfile:
@@ -86,7 +86,7 @@ def dump_classifier_and_data(clf, dataset, feature_list):
     with open(FEATURE_LIST_FILENAME, "w") as featurelist_outfile:
         pickle.dump(feature_list, featurelist_outfile)
 
-def load_classifier_and_data():
+def load_classifier_and_data(): #loading classifier and data
     with open(CLF_PICKLE_FILENAME, "r") as clf_infile:
         clf = pickle.load(clf_infile)
     with open(DATASET_PICKLE_FILENAME, "r") as dataset_infile:
