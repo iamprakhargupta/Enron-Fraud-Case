@@ -8,7 +8,7 @@ import pickle
 sys.path.append("../tools/")
 import helper_function as hf
 from time import time
-
+import keras
 from feature_format import featureFormat, targetFeatureSplit
 from tester import dump_classifier_and_data,test_classifier
 
